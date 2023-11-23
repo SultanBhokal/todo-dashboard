@@ -1,0 +1,33 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.body{
+  background: rgb(24 24 27 );
+}
+
+.tfoot{
+  color: white;
+}
+
+@keyframes fight {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-fight-1 {
+  animation: fight 1s infinite alternate ease-in-out;
+}
+
+.animate-fight-2 {
+  animation: fight 1s infinite alternate ease-in-out;
+  animation-delay: 0.1s;
+}
+
+/* ... repeat for animate-fight-3 through animate-fight-8 with appropriate delays */

@@ -1,0 +1,12 @@
+.fc-event{
+    background: linear-gradient(109.6deg, rgb(157, 75, 199) 11.2%, rgb(119, 81, 204) 83.1%) !important;
+}
+
+.fc .fc-timegrid-slot{
+    height: 2.5rem !important;
+    
+}
+
+td{
+    border: 1px solid gray !important;
+}
