@@ -42,8 +42,8 @@ function FullCalendarContainer() {
 
 
     return (
-        <div className=" h-full w-full flex justify-center items-center " >
-            <div className=" m-auto w-11/12 h-full pt-5 pb-0 ps-20 pe-20 max-w-screen-lg bg-zinc-800 bg-opacity-70 rounded-3xl">
+        <div className=" h-full w-full flex justify-center items-center" >
+            <div className=" m-auto w-11/12 h-full pt-5 pb-0 ps-20 pe-20 max-w-screen-lg bg-zinc-800 bg-opacity-70 rounded-3xl overflow-auto">
                 <FullCalendar
                     plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
                     headerToolbar={{

@@ -26,7 +26,7 @@ function Header1() {
         }
     }
     return (
-        <div className=' w-full h-1/4 flex justify-around items-center relative overflow-auto' >
+        <div className=' w-full h-1/4 flex justify-around items-center relative' >
             <section className=' font-extrabold text-red-400'>
                 <h3>{curr_page.toUpperCase()}</h3>
             </section>
