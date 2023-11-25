@@ -38,13 +38,13 @@ const Todo = ({ text, column, onDrag, className = "", id = "", handleRemove, han
 
   return (
     <div ref={drag} className={className} style={{ border: '1px solid #ccc', padding: '8px', margin: '8px', position: "relative" }}>
-      <span className=' absolute left-0' >
+      <span className='' >
         <Modal1 title={column} show={openEdit} setShow={setOpenEdit} edit={true} value={text} handleEdit={handleEditChange} modalTitle={
           <EditIcon color="warning" className=' cursor-pointer transition-opacity hover:opacity-60' />
         } />
       </span>
       {text}
-      <span className=' absolute right-0' onClick={() => setOpenDialog(true)}><DeleteForeverIcon color='warning' className=' cursor-pointer transition-opacity hover:opacity-60' /></span>
+      <span className='' onClick={() => setOpenDialog(true)}><DeleteForeverIcon color='warning' className=' cursor-pointer transition-opacity hover:opacity-60' /></span>
       <Modal2 title={text} show={openDialog} setShow={setOpenDialog} handleChange={handleDelete} />
     </div>
   );
@@ -68,9 +68,9 @@ const Column = ({ title, todos, onDrop, className, handleAdd, handleEdit, handle
         border: `1px solid ${isOver ? 'red' : '#ccc'}`,
       }}
     >
-      <div className=' bg-neutral-800 text-center rounded-2xl h-10 flex items-center justify-center relative'>
-        <span className=' absolute right-5'><Modal1 show={show} setShow={setShow} modalTitle={<AddIcon className=' cursor-pointer text-green-600 transition-opacity hover:opacity-70' />} title={title} handleSave={handleAdd} /></span>
-        <h3>{title}</h3>
+      <div className=' bg-neutral-800 text-center rounded-2xl h-10 flex items-center justify-center'>
+        <h3 className=''>{title}</h3>
+        <span className=''><Modal1 show={show} setShow={setShow} modalTitle={<AddIcon className=' cursor-pointer text-green-600 transition-opacity hover:opacity-70' />} title={title} handleSave={handleAdd} /></span>
       </div>
       {todos.map((todo: any, index: any) => (
         <Todo key={index} text={todo.text} id={todo.id} column={title} onDrag={onDrop} className={className} handleRemove={handleRemove} handleEdit={handleEdit} />
@@ -97,12 +97,12 @@ function TodoBoardContainer() {
     IN_PROGRESS: string;
     COMPLETED: string;
   } = {
-    'TASKS': "rounded-2xl cursor-grab h-14 text-center bg-blue-500 bg-opacity-60",
-    'IN_PROGRESS': "rounded-2xl cursor-grab h-14 text-center bg-orange-300 bg-opacity-60",
-    'COMPLETED': "rounded-2xl cursor-grab h-14 text-center bg-green-500 bg-opacity-60 line-through",
+    'TASKS': "rounded-2xl cursor-grab h-14 text-center bg-blue-500 bg-opacity-60 flex justify-between",
+    'IN_PROGRESS': "rounded-2xl cursor-grab h-14 text-center bg-purple-500 bg-opacity-60 flex justify-between",
+    'COMPLETED': "rounded-2xl cursor-grab h-14 text-center bg-green-500 bg-opacity-60 line-through flex justify-between",
   }
   const classNameForBacklog = "rounded-2xl cursor-grab h-14 text-center bg-blue-500 bg-opacity-60"
-  const classNameForTasks = "rounded-2xl cursor-grab h-14 text-center bg-orange-300 bg-opacity-60"
+  const classNameForTasks = "rounded-2xl cursor-grab h-14 text-center bg-orange-500 bg-opacity-60"
   const classNameForCompleted = "rounded-2xl cursor-grab h-14 text-center bg-green-500 bg-opacity-60 line-through"
   let className = ""
 

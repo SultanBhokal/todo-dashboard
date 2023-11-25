@@ -16,7 +16,7 @@ function Sidebar1() {
   }
 
   return (
-    <div className=' h-screen w-40 overflow-auto flex flex-col pt-10 gap-16 items-center bg-neutral-950'>
+    <div className=' h-screen w-40 overflow-auto flex flex-col pt-10 gap-16 items-center bg-neutral-950' style={{minWidth:"7rem"}}>
       <div className=''>
         <span>
           <FitbitIcon fontSize='large' className=' text-red-400 cursor-pointer' />
